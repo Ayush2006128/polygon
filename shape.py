@@ -15,14 +15,12 @@ class Rectangle:
         return (self.width ** 2 + self.height ** 2) ** 0.5
 
     def shape(self):
-        line="*"
         if self.width >= 50 or self.height >= 50:
             return "The shape is too big."
 
         for i in range(self.height):
-            line *= self.width
-            line += "\n"
-        return line
+            print("*" * self.width)
+        return f"Rectangle(width={self.width},height={self.height})"
 
 # create a class for square
 class Square(Rectangle):
@@ -40,11 +38,9 @@ class Square(Rectangle):
         return (self.side ** 2) ** 0.5
 
     def shape(self):
-        line = "*"
         if self.side >= 50:
             return "The shape is too big."
 
         for i in range(self.side):
-            line *= self.side
-            line += "\n"
-        return line
+            print("*" * self.side)
+        return f"Square(side={self.side})"
